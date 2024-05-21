@@ -1,0 +1,103 @@
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Lab Informatika
+ */
+public class halamanPenyewaan1 {
+    
+    
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class halamanPembelian extends JFrame implements ActionListener  {
+    
+    JLabel tulisan1 = new JLabel (" Halaman Penyewaan ");
+    JLabel namaPemilik = new JLabel (" Pemilik ");
+    JLabel namaAlat = new JLabel (" Alat ");
+    JTextField nomorTelepon = new JTextField (" Telepon ");
+    JTextField waktuSewa = new JTextField (" Waktu ");
+    JTextField biayaSewa = new JTextField (" Biaya ");
+    JButton tambah  = new JButton(" Tambah ");
+    JButton ubah  = new JButton(" Ubah ");
+    JButton clear = new JButton(" Clear ");
+    JButton hapus = new JButton(" Hapus ");
+    
+            
+            
+
+    halamanPembelian(){
+        setTitle(" Halaman Penyewaan ");
+        setSize(720, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+        setLocationRelativeTo(null);
+        
+        add(tulisan1);
+        add(namaPemilik);
+        add(namaAlat);
+        add(nomorTelepon);
+        add(waktuSewa);
+        add(biayaSewa);
+        add(tambah);
+        add(ubah);
+        add(clear);
+        add(hapus);
+        
+        kategori.setText("BullKing Gym");
+        tulisan1.setBounds(30,60, 600, 24);
+        namaPemilik.setBounds(100,100, 600, 24);
+        namaAlat.setBounds(30,130, 600, 24);
+        nomorTelepon.setBounds(100,170, 600, 24);
+        waktuSewa.setBounds(30,200, 600, 24);
+        biayaSewa.setBounds(30,250, 600, 24);
+        tambah.setBounds(100,300, 600, 24);
+        ubah.setBounds(30,350, 600, 24);
+        clear.setBounds(30,370, 600, 24);
+        hapus.setBounds(100,390, 600, 24);
+
+        tulisan1.setFont(new Font("Arial", Font.BOLD, 17));
+        namaPemilik.setFont(new Font("Arial", Font.BOLD, 17));
+        namaAlat.setFont(new Font("Arial", Font.BOLD, 17));
+        nomorTelepon.setFont(new Font("Arial", Font.BOLD, 17));
+        waktuSewa.setFont(new Font("Arial", Font.BOLD, 17));
+        biayaSewa.setFont(new Font("Arial", Font.BOLD, 17));
+        tambah.setFont(new Font("Arial", Font.BOLD, 17));
+        ubah.setFont(new Font("Arial", Font.BOLD, 17));
+        clear.setFont(new Font("Arial", Font.BOLD, 17));
+        hapus.setFont(new Font("Arial", Font.BOLD, 17));
+        
+        kembali.addActionListener(this);
+        hapus.addActionListener(this);
+ 
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+     
+        if(e.getSource()== kembali){
+            new halamanLogin();
+      
+
+     }
+    }
+}
